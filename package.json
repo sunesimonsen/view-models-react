@@ -1,0 +1,66 @@
+{
+  "name": "@view-models/react",
+  "version": "0.1.0",
+  "description": "React integration for @view-models/core",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "view-models",
+    "state-management"
+  ],
+  "author": "Sune Simonsen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunesimonsen/view-models-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunesimonsen/view-models-react/issues"
+  },
+  "homepage": "https://github.com/sunesimonsen/view-models-react#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@view-models/core": "^1.1.0",
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^18.3.18",
+    "@view-models/core": "^1.1.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
