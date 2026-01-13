@@ -86,26 +86,9 @@ function Counter() {
 }
 ```
 
-## API
+## API Reference
 
-### `useModelState<T>(model: ViewModel<T>): T`
-
-A React hook that subscribes to state updates from a ViewModel instance.
-
-**Parameters:**
-
-- `model`: A ViewModel instance to subscribe to
-
-**Returns:**
-
-- The current state of the ViewModel
-
-**Features:**
-
-- Automatically subscribes to state updates when the component mounts
-- Automatically unsubscribes when the component unmounts
-- Re-renders the component when the ViewModel state changes
-- Multiple components can subscribe to the same ViewModel
+For detailed API documentation, see [docs](./docs).
 
 ## License
 
