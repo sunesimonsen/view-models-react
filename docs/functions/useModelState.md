@@ -8,7 +8,7 @@
 
 > **useModelState**\<`T`\>(`model`): `T`
 
-Defined in: [useModelState.ts:69](https://github.com/sunesimonsen/view-models-react/blob/main/src/useModelState.ts#L69)
+Defined in: [useModelState.ts:92](https://github.com/sunesimonsen/view-models-react/blob/main/src/useModelState.ts#L92)
 
 A React hook that subscribes a component to a ViewModel's state updates.
 
