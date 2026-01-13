@@ -8,6 +8,29 @@ import { useSyncExternalStore } from "react";
  */
 export type ViewModelListener = () => void;
 
+/**
+ * Interface for a ViewModel that manages state and notifies subscribers of changes.
+ *
+ * ViewModels provide a way to manage component state outside of the component tree,
+ * allowing multiple components to share and react to the same state. They follow
+ * the observer pattern, where components can subscribe to state changes and receive
+ * notifications when updates occur.
+ *
+ * @template T - The type of state managed by this ViewModel
+ *
+ * @example
+ * ```typescript
+ * // Implementing a ViewModel
+ * class CounterViewModel extends ViewModel<{ count: number }> {
+ *   increment = () => this.update(({ count }) => ({ count: count + 1 }));
+ *   decrement = () => this.update(({ count }) => ({ count: count - 1 }));
+ * }
+ *
+ * // Using in a component
+ * const counterModel = new CounterViewModel({ count: 0 });
+ * const { count } = useModelState(counterModel);
+ * ```
+ */
 export interface ViewModel<T> {
   /**
    * Subscribe to state changes.
