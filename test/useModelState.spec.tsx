@@ -7,11 +7,11 @@ type CounterState = Readonly<{ count: number }>;
 
 class CounterViewModel extends ViewModel<CounterState> {
   increment() {
-    this.update(({ count }) => ({ count: count + 1 }));
+    super.update({ count: super.state.count + 1 });
   }
 
   decrement() {
-    this.update(({ count }) => ({ count: count - 1 }));
+    super.update({ count: super.state.count - 1 });
   }
 }
 
