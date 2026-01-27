@@ -1,5 +1,8 @@
 # @view-models/react
 
+[![CI](https://github.com/sunesimonsen/view-models-react/actions/workflows/ci.yml/badge.svg)](https://github.com/sunesimonsen/view-models-react/actions/workflows/ci.yml)
+[![Bundle Size](https://img.badgesize.io/https://unpkg.com/@view-models/react@latest/dist/index.js?label=gzip&compression=gzip)](https://unpkg.com/@view-models/react@latest/dist/index.js)
+
 React integration for [@view-models/core](https://github.com/sunesimonsen/view-models-core).
 
 ## Installation
