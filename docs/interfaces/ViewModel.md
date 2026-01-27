@@ -20,8 +20,8 @@ notifications when updates occur.
 ```typescript
 // Implementing a ViewModel
 class CounterViewModel extends ViewModel<{ count: number }> {
-  increment = () => this.update(({ count }) => ({ count: count + 1 }));
-  decrement = () => this.update(({ count }) => ({ count: count - 1 }));
+  increment = () => super.update({ count: super.state.count + 1 });
+  decrement = () => super.update({ count: super.state.count - 1 });
 }
 
 // Using in a component

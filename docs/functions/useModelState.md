@@ -41,7 +41,7 @@ The current state from the ViewModel
 
 ```tsx
 class CounterViewModel extends ViewModel<{ count: number }> {
-  increment = () => this.update(({ count }) => ({ count: count + 1 }));
+  increment = () => super.update({ count: super.state.count + 1 });
 }
 
 function Counter() {
