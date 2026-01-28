@@ -1,8 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, act } from "@testing-library/react";
-import { ViewModel } from "@view-models/core";
+import { ViewModel, derived } from "@view-models/core";
 import { useDerivedState } from "../src/useDerivedState.js";
-import { derived } from "../src/derived.js";
 
 type TodoItem = {
   id: number;

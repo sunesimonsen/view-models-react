@@ -53,8 +53,8 @@ Use `useDerivedState` with the `derived` helper to compute values from your mode
 Derived mappers should be defined outside your components:
 
 ```tsx
-import { ViewModel } from "@view-models/core";
-import { useDerivedState, derived } from "@view-models/react";
+import { ViewModel, derived } from "@view-models/core";
+import { useDerivedState } from "@view-models/react";
 
 type TodoItem = {
   id: number;

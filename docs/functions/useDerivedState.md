@@ -8,7 +8,7 @@
 
 > **useDerivedState**\<`S`, `D`\>(`model`, `mapper`): `D`
 
-Defined in: [useDerivedState.ts:43](https://github.com/sunesimonsen/view-models-react/blob/main/src/useDerivedState.ts#L43)
+Defined in: [useDerivedState.ts:51](https://github.com/sunesimonsen/view-models-react/blob/main/src/useDerivedState.ts#L51)
 
 A React hook that subscribes to a ViewModel and returns derived state.
 
@@ -42,7 +42,7 @@ The ViewModel instance to subscribe to
 
 ### mapper
 
-[`DerivedMapper`](../type-aliases/DerivedMapper.md)\<`S`, `D`\>
+`DerivedMapper`\<`S`, `D`\>
 
 A derived mapper function created with the `derived` utility
 
@@ -55,8 +55,8 @@ The derived state computed from the current model state
 ## Example
 
 ```tsx
-import { ViewModel } from "@view-models/core";
-import { useDerivedState, derived } from "@view-models/react";
+import { ViewModel, derived } from "@view-models/core";
+import { useDerivedState } from "@view-models/react";
 
 type TodoState = {
   items: Array<{ id: string; text: string; completed: boolean }>;
