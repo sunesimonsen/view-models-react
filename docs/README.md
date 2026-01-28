@@ -4,14 +4,12 @@
 
 # @view-models/react
 
-## Interfaces
-
-- [ViewModel](interfaces/ViewModel.md)
-
 ## Type Aliases
 
-- [ViewModelListener](type-aliases/ViewModelListener.md)
+- [DerivedMapper](type-aliases/DerivedMapper.md)
 
 ## Functions
 
+- [derived](functions/derived.md)
+- [useDerivedState](functions/useDerivedState.md)
 - [useModelState](functions/useModelState.md)

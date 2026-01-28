@@ -8,7 +8,7 @@
 
 > **useModelState**\<`T`\>(`model`): `T`
 
-Defined in: [useModelState.ts:92](https://github.com/sunesimonsen/view-models-react/blob/main/src/useModelState.ts#L92)
+Defined in: [useModelState.ts:33](https://github.com/sunesimonsen/view-models-react/blob/main/src/useModelState.ts#L33)
 
 A React hook that subscribes a component to a ViewModel's state updates.
 
@@ -27,7 +27,7 @@ The state type, which must extend the State interface
 
 ### model
 
-[`ViewModel`](../interfaces/ViewModel.md)\<`T`\>
+`ViewModel`\<`T`\>
 
 The ViewModel instance to subscribe to
 
