@@ -1,6 +1,14 @@
 import { useModelState } from "./useModelState";
 import { ViewModel } from "./ViewModel";
-import { DerivedMapper } from "./derived";
+
+type Mapper<I, O> = (input: I) => O;
+
+/**
+ * A branded type for derived state mapper functions created by the `derived` utility.
+ * This type ensures that mapper functions are properly memoized before being used
+ * with hooks like `useDerivedState`.
+ */
+type DerivedMapper<I, O> = Mapper<I, O> & { __brand: "derived" };
 
 /**
  * A React hook that subscribes to a ViewModel and returns derived state.
@@ -19,8 +27,8 @@ import { DerivedMapper } from "./derived";
  *
  * @example
  * ```tsx
- * import { ViewModel } from "@view-models/core";
- * import { useDerivedState, derived } from "@view-models/react";
+ * import { ViewModel, derived } from "@view-models/core";
+ * import { useDerivedState } from "@view-models/react";
  *
  * type TodoState = {
  *   items: Array<{ id: string; text: string; completed: boolean }>;
