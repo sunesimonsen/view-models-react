@@ -1,6 +1,6 @@
 {
   "name": "@view-models/react",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "React integration for @view-models/core",
   "type": "module",
   "main": "./dist/index.js",
