@@ -30,6 +30,5 @@ import { ViewModel } from "./ViewModel";
  * }
  * ```
  */
-export function useModelState<T>(model: ViewModel<T>): T {
-  return useSyncExternalStore(model.subscribe.bind(model), () => model.state);
-}
+export const useModelState = <T>(model: ViewModel<T>): T =>
+  useSyncExternalStore(model.subscribe.bind(model), () => model.state);
