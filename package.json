@@ -55,6 +55,7 @@
     "@testing-library/react": "^16.1.0",
     "@types/react": "^18.3.18",
     "@view-models/core": "^4.1.0",
+    "@view-models/react": "^3.0.0",
     "@vitest/coverage-v8": "^2.1.8",
     "jsdom": "^26.0.0",
     "prettier": "^3.4.2",
