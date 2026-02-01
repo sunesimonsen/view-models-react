@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach } from "vitest";
-import { render, screen, act } from "@testing-library/react";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { render, screen, act, cleanup } from "@testing-library/react";
 import { ViewModel } from "@view-models/core";
 import { useModelState } from "../src/useModelState.js";
 
@@ -22,10 +22,14 @@ describe("useModelState", () => {
     counterModel = new CounterViewModel({ count: 0 });
   });
 
-  function TestComponent() {
+  afterEach(() => {
+    cleanup();
+  });
+
+  const TestComponent = () => {
     const { count } = useModelState(counterModel);
     return <div>Count: {count}</div>;
-  }
+  };
 
   it("returns the initial state", () => {
     render(<TestComponent />);
@@ -72,15 +76,15 @@ describe("useModelState", () => {
   });
 
   it("works with multiple components", () => {
-    function Component1() {
+    const Component1 = () => {
       const state = useModelState(counterModel);
       return <div data-testid="component1">Count: {state.count}</div>;
-    }
+    };
 
-    function Component2() {
+    const Component2 = () => {
       const state = useModelState(counterModel);
       return <div data-testid="component2">Count: {state.count}</div>;
-    }
+    };
 
     render(
       <>
