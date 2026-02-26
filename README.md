@@ -48,7 +48,7 @@ function Counter() {
 
 ### Creating view models inside components
 
-When you need to create a view model from within a React component, use `useMemo` to ensure the model is only created once. 
+When you need to create a view model from within a React component, use `useMemo` to ensure the model is only created once.
 
 It's good practice to provide both a component that creates its own model and a customizable version that accepts a model as a prop.
 
